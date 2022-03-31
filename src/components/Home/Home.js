@@ -5,7 +5,6 @@ const Home = () => {
     const userName=useRef();
     const [inputText,setInputText]=useState('');
     const [user,setUser]=useState({});
-    console.log(user);
     const submitHandler=(e)=>{
         e.preventDefault()
         setInputText(userName.current.value)
@@ -28,7 +27,7 @@ const Home = () => {
                 
                 </form>
             </div>
-            <div className='mt-10 p-10 border-4 w-96 mx-auto'>
+            <div className='mt-10 p-10 w-96 mx-auto'>
                 <div className='flex justify-between items-center'>
                     <img className='w-16' src={user.avatar_url} alt="" />
                     <h1>{user.name}</h1>
