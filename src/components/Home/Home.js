@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Home = () => {
+    const navigate= useNavigate();
     const userName=useRef();
     const [inputText,setInputText]=useState('');
     const [user,setUser]=useState({});
@@ -29,8 +31,9 @@ const Home = () => {
             </div>
             <div className='mt-10 p-10 w-96 mx-auto'>
                 <div className='flex justify-between items-center'>
-                    <img className='w-16' src={user.avatar_url} alt="" />
+                    <img className='w-16 rounded-full' src={user.avatar_url} alt="" />
                     <h1>{user.name}</h1>
+                    <button onClick={()=>navigate(`/personDetails/${inputText}`)} className='p-2 bg-indigo-400 rounded text-white'>Details</button>
                 </div>
             </div>
 
