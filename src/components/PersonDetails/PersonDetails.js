@@ -22,7 +22,6 @@ const PersonDetails = () => {
             </div>
             <h5>Account create: {user.created_at}</h5>
             <a className='p-2 text-blue-700 hover:underline rounded' href={user.html_url}>Click github profile</a>
-            <a className='p-2 text-blue-700 hover:underline rounded' href={user.subscriptions_url}>Subscribe</a>
         </div>
     );
 };
