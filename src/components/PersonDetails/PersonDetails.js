@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+// personal details page 
 const PersonDetails = () => {
     const {id}=useParams();
     const [user,setUser]=useState({});
