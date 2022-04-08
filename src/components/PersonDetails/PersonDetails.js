@@ -11,11 +11,11 @@ const PersonDetails = () => {
         .then(data=>setUser(data))
     },[id])
     return (
-        <div>
+        <div className=''>
             <img className='mx-auto mt-4 rounded-lg' src={user.avatar_url} alt="" />
             <h2>{user.name}</h2>
-            <p>Bio: {user.bio}</p>
-            <h4>Location: {user.location}</h4>
+            <p>Bio: {user.bio? user.bio:'Not Found'}</p>
+            <h4>Location: {user.location? user.location:'Not Found'}</h4>
             <div className='flex justify-center gap-5'>
                 <h3>Followers: {user.followers}</h3>
                 <h3>Following: {user.following}</h3>
